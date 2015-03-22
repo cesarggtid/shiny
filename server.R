@@ -3,6 +3,9 @@ library(shiny)
 library(datasets)
 library(caret)
 library(party)
+library(e1071)
+library(rpart)
+library(rpart.plot)
 
 train.arbol <- function(caret.method, trainData) {
   
