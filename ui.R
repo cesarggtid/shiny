@@ -18,6 +18,7 @@ shinyUI(
       
       # Define the sidebar with one input
       sidebarPanel(
+        helpText("This simple application will allow you compare several types of classifiers using the well known iris dataset"),
         helpText("Select a model in the Method Select box and train it doing click on the button Train."),
         helpText("After training, check the accurate of the classifier clicking on the button Test."),
         selectInput("model", "Method:", 
@@ -27,7 +28,7 @@ shinyUI(
         actionButton("goTest", "Test"),
         hr(),
         h3("Predict"),
-        helpText("To predict the class for a observation, fill the data in the text boxes and click on the button Predict."),
+        helpText("To predict the class for a specific observation, fill the data in the features text boxes below and click on the button Predict."),
         numericInput("petal_length", "Petal Length:", 0),
         numericInput("petal_width", "Petal Width:", 0),
         numericInput("sepal_length", "Sepal Length:", 0),
